@@ -3,6 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sdo-wcf", "sdo-wcf\sdo-wcf.csproj", "{15B3E0D2-6217-493A-A690-158C497F5318}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Serwer", "Serwer\Serwer.csproj", "{96AD5B59-62F1-416F-90EE-E0E0D719794E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client", "Client\Client.csproj", "{70E0C49F-3C64-4850-B5A3-E7789F55DC5B}"
+	ProjectSection(ProjectDependencies) = postProject
+		{15B3E0D2-6217-493A-A690-158C497F5318} = {15B3E0D2-6217-493A-A690-158C497F5318}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +20,14 @@ Global
 		{15B3E0D2-6217-493A-A690-158C497F5318}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{15B3E0D2-6217-493A-A690-158C497F5318}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{15B3E0D2-6217-493A-A690-158C497F5318}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96AD5B59-62F1-416F-90EE-E0E0D719794E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96AD5B59-62F1-416F-90EE-E0E0D719794E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96AD5B59-62F1-416F-90EE-E0E0D719794E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96AD5B59-62F1-416F-90EE-E0E0D719794E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{70E0C49F-3C64-4850-B5A3-E7789F55DC5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70E0C49F-3C64-4850-B5A3-E7789F55DC5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70E0C49F-3C64-4850-B5A3-E7789F55DC5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70E0C49F-3C64-4850-B5A3-E7789F55DC5B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

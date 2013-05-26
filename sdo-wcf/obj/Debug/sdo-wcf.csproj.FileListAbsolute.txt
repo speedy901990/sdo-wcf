@@ -1,0 +1,6 @@
+c:\users\slk18_000\documents\visual studio 2012\Projects\sdo-wcf\sdo-wcf\bin\Debug\sdo-wcf.dll.config
+c:\users\slk18_000\documents\visual studio 2012\Projects\sdo-wcf\sdo-wcf\bin\Debug\sdo-wcf.dll
+c:\users\slk18_000\documents\visual studio 2012\Projects\sdo-wcf\sdo-wcf\bin\Debug\sdo-wcf.pdb
+c:\users\slk18_000\documents\visual studio 2012\Projects\sdo-wcf\sdo-wcf\obj\Debug\sdo-wcf.csprojResolveAssemblyReference.cache
+c:\users\slk18_000\documents\visual studio 2012\Projects\sdo-wcf\sdo-wcf\obj\Debug\sdo-wcf.dll
+c:\users\slk18_000\documents\visual studio 2012\Projects\sdo-wcf\sdo-wcf\obj\Debug\sdo-wcf.pdb

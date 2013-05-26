@@ -1,0 +1,8 @@
+c:\Users\slk18_000\documents\visual studio 2012\Projects\sdo-wcf\Client\bin\Debug\Client.exe.config
+c:\Users\slk18_000\documents\visual studio 2012\Projects\sdo-wcf\Client\bin\Debug\Client.exe
+c:\Users\slk18_000\documents\visual studio 2012\Projects\sdo-wcf\Client\bin\Debug\Client.pdb
+c:\Users\slk18_000\documents\visual studio 2012\Projects\sdo-wcf\Client\obj\Debug\Client.Form1.resources
+c:\Users\slk18_000\documents\visual studio 2012\Projects\sdo-wcf\Client\obj\Debug\Client.Properties.Resources.resources
+c:\Users\slk18_000\documents\visual studio 2012\Projects\sdo-wcf\Client\obj\Debug\Client.csproj.GenerateResource.Cache
+c:\Users\slk18_000\documents\visual studio 2012\Projects\sdo-wcf\Client\obj\Debug\Client.exe
+c:\Users\slk18_000\documents\visual studio 2012\Projects\sdo-wcf\Client\obj\Debug\Client.pdb

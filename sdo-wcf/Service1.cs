@@ -10,22 +10,15 @@ namespace sdo_wcf
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "Service1" in both code and config file together.
     public class Service1 : IService1
     {
-        public string GetData(int value)
+        public string GetData(int id)
         {
-            return string.Format("You entered: {0}", value);
+            return string.Format("You entered: {0}", id);
+            //TODO zwracanie obiektu zawierajacego dane
         }
-
-        public CompositeType GetDataUsingDataContract(CompositeType composite)
+        public string SetData(string data)
         {
-            if (composite == null)
-            {
-                throw new ArgumentNullException("composite");
-            }
-            if (composite.BoolValue)
-            {
-                composite.StringValue += "Suffix";
-            }
-            return composite;
+            return "OK";
+            //TODO zapisywanie danych do bazy
         }
     }
 }

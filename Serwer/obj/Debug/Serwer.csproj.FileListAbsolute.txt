@@ -1,0 +1,11 @@
+c:\Users\slk18_000\documents\visual studio 2012\Projects\sdo-wcf\Serwer\bin\Debug\Serwer.exe.config
+c:\Users\slk18_000\documents\visual studio 2012\Projects\sdo-wcf\Serwer\obj\Debug\Serwer.csprojResolveAssemblyReference.cache
+c:\Users\slk18_000\documents\visual studio 2012\Projects\sdo-wcf\Serwer\obj\Debug\Serwer.Form1.resources
+c:\Users\slk18_000\documents\visual studio 2012\Projects\sdo-wcf\Serwer\obj\Debug\Serwer.Properties.Resources.resources
+c:\Users\slk18_000\documents\visual studio 2012\Projects\sdo-wcf\Serwer\obj\Debug\Serwer.csproj.GenerateResource.Cache
+c:\Users\slk18_000\documents\visual studio 2012\Projects\sdo-wcf\Serwer\bin\Debug\Serwer.exe
+c:\Users\slk18_000\documents\visual studio 2012\Projects\sdo-wcf\Serwer\bin\Debug\Serwer.pdb
+c:\Users\slk18_000\documents\visual studio 2012\Projects\sdo-wcf\Serwer\bin\Debug\sdo-wcf.dll
+c:\Users\slk18_000\documents\visual studio 2012\Projects\sdo-wcf\Serwer\bin\Debug\sdo-wcf.pdb
+c:\Users\slk18_000\documents\visual studio 2012\Projects\sdo-wcf\Serwer\obj\Debug\Serwer.exe
+c:\Users\slk18_000\documents\visual studio 2012\Projects\sdo-wcf\Serwer\obj\Debug\Serwer.pdb
