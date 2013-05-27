@@ -9,3 +9,6 @@ c:\Users\slk18_000\documents\visual studio 2012\Projects\sdo-wcf\Serwer\bin\Debu
 c:\Users\slk18_000\documents\visual studio 2012\Projects\sdo-wcf\Serwer\bin\Debug\sdo-wcf.pdb
 c:\Users\slk18_000\documents\visual studio 2012\Projects\sdo-wcf\Serwer\obj\Debug\Serwer.exe
 c:\Users\slk18_000\documents\visual studio 2012\Projects\sdo-wcf\Serwer\obj\Debug\Serwer.pdb
+E:\Git\Source\Repos\sdo-wcf\Serwer\bin\Debug\Serwer.exe.config
+E:\Git\Source\Repos\sdo-wcf\Serwer\obj\Debug\Serwer.exe
+E:\Git\Source\Repos\sdo-wcf\Serwer\obj\Debug\Serwer.pdb
