@@ -27,8 +27,9 @@ namespace sdo_wcf.InteractionModels
         public Person getPerson(int id)
         {
             DBEntities db = new DBEntities();
+            Person r = new Person();
 
-            Person r = (from rr in db.People
+            r = (from rr in db.People
                         where rr.Id == id
                         select rr).First();
 

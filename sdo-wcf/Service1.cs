@@ -17,10 +17,16 @@ namespace sdo_wcf
             //TODO zwracanie obiektu zawierajacego dane
 
             SDOModelMethods sdomm = new SDOModelMethods();
-
-            Person p = sdomm.getPerson(id);
-
-            return string.Format("{0} {1}", p.Name, p.Surname);
+            Person p = new Person();
+            try
+            {
+                p = sdomm.getPerson(id);
+            }
+            catch (Exception e)
+            {
+                return e.Message;
+            }
+            return string.Format("{0} {1}, {2}, student: {3}", p.Name, p.Surname, p.Email, p.Student);
         }
 
         public string AddNewStudentLame(string _name, string _surn, bool batman, string _mail)
@@ -30,18 +36,24 @@ namespace sdo_wcf
 
             SDOModelMethods sdomm = new SDOModelMethods();
 
-            sdomm.addPerson(_name, _surn, batman, _mail);
+            try
+            {
+                sdomm.addPerson(_name, _surn, batman, _mail);
+            }
+            catch (Exception e)
+            {
+                return e.Message;
+            }
 
-            return "Done.";
+            return "Done";
         }
 
         public string TerriblyRetrieveDatabase()
         {
-            string sp = "aa";
             SDOModelMethods sdolm = new SDOModelMethods();
             List<InteractionModels.Person> pp = new List<InteractionModels.Person>();
             pp = sdolm.GetListOfPeople();
-            sp = pp.ToString(); // Istnieje specjalne miejsce w piekle dla ludzi, którzy robią coś takiego.
+            string sp = pp.ToString(); // Istnieje specjalne miejsce w piekle dla ludzi, którzy robią coś takiego.
             return sp;
         }
 

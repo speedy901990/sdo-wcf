@@ -32,19 +32,18 @@ namespace Client
         private void sendButton_Click(object sender, EventArgs e)
         {
             int id = 3;
+            id = Int32.Parse(textBox1.Text);
             // O, proszę - tu jest bardzo ładne RMI. Prawda? :]
             result = client.GetData(id);
 
-            textBox1.Text = result;
+            MessageBox.Show(result);
         }
 
         private void addButton_Click(object sender, EventArgs e)
         {
-            string a = client.AddNewStudentLame("Adam", "kkkkkk", true, "aaa@bbb.com");
+            string err = client.AddNewStudentLame(nameTextBox.Text, surnameTextBox.Text, studentCheckBox.Checked, emailTextBox.Text);
 
-            MessageBox.Show(a);
+            MessageBox.Show(err);
         }
-
-
     }
 }

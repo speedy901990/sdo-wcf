@@ -50,7 +50,5 @@ namespace Serwer
 
             this.Close();
         }
-
-        
     }
 }

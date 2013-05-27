@@ -19,6 +19,6 @@ C:\Users\Dariusz\Source\Repos\sdo-wcf\Client\obj\Debug\Client.exe
 C:\Users\Dariusz\Source\Repos\sdo-wcf\Client\obj\Debug\Client.pdb
 C:\Users\Dariusz\Source\Repos\sdo-wcf\Client\bin\Debug\Client.exe
 C:\Users\Dariusz\Source\Repos\sdo-wcf\Client\bin\Debug\Client.pdb
-C:\Users\Dariusz\Source\Repos\sdo-wcf\Client\obj\Debug\Client.Form1.resources
 C:\Users\Dariusz\Source\Repos\sdo-wcf\Client\obj\Debug\Client.Properties.Resources.resources
 C:\Users\Dariusz\Source\Repos\sdo-wcf\Client\obj\Debug\Client.csproj.GenerateResource.Cache
+C:\Users\Dariusz\Source\Repos\sdo-wcf\Client\obj\Debug\Client.Form1.resources
