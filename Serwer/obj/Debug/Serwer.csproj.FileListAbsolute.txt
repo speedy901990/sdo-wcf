@@ -12,3 +12,15 @@ c:\Users\slk18_000\documents\visual studio 2012\Projects\sdo-wcf\Serwer\obj\Debu
 E:\Git\Source\Repos\sdo-wcf\Serwer\bin\Debug\Serwer.exe.config
 E:\Git\Source\Repos\sdo-wcf\Serwer\obj\Debug\Serwer.exe
 E:\Git\Source\Repos\sdo-wcf\Serwer\obj\Debug\Serwer.pdb
+E:\Git\Source\Repos\sdo-wcf\Serwer\bin\Debug\Database01.mdf
+E:\Git\Source\Repos\sdo-wcf\Serwer\bin\Debug\Database01_log.ldf
+E:\Git\Source\Repos\sdo-wcf\Serwer\bin\Debug\Serwer.exe
+E:\Git\Source\Repos\sdo-wcf\Serwer\bin\Debug\Serwer.pdb
+E:\Git\Source\Repos\sdo-wcf\Serwer\bin\Debug\sdo-wcf.dll
+E:\Git\Source\Repos\sdo-wcf\Serwer\bin\Debug\EntityFramework.dll
+E:\Git\Source\Repos\sdo-wcf\Serwer\bin\Debug\sdo-wcf.pdb
+E:\Git\Source\Repos\sdo-wcf\Serwer\bin\Debug\EntityFramework.xml
+E:\Git\Source\Repos\sdo-wcf\Serwer\obj\Debug\Serwer.csprojResolveAssemblyReference.cache
+E:\Git\Source\Repos\sdo-wcf\Serwer\obj\Debug\Serwer.Form1.resources
+E:\Git\Source\Repos\sdo-wcf\Serwer\obj\Debug\Serwer.Properties.Resources.resources
+E:\Git\Source\Repos\sdo-wcf\Serwer\obj\Debug\Serwer.csproj.GenerateResource.Cache

@@ -6,3 +6,11 @@ c:\Users\slk18_000\documents\visual studio 2012\Projects\sdo-wcf\Client\obj\Debu
 c:\Users\slk18_000\documents\visual studio 2012\Projects\sdo-wcf\Client\obj\Debug\Client.csproj.GenerateResource.Cache
 c:\Users\slk18_000\documents\visual studio 2012\Projects\sdo-wcf\Client\obj\Debug\Client.exe
 c:\Users\slk18_000\documents\visual studio 2012\Projects\sdo-wcf\Client\obj\Debug\Client.pdb
+E:\Git\Source\Repos\sdo-wcf\Client\bin\Debug\Client.exe.config
+E:\Git\Source\Repos\sdo-wcf\Client\bin\Debug\Client.exe
+E:\Git\Source\Repos\sdo-wcf\Client\bin\Debug\Client.pdb
+E:\Git\Source\Repos\sdo-wcf\Client\obj\Debug\Client.Form1.resources
+E:\Git\Source\Repos\sdo-wcf\Client\obj\Debug\Client.Properties.Resources.resources
+E:\Git\Source\Repos\sdo-wcf\Client\obj\Debug\Client.csproj.GenerateResource.Cache
+E:\Git\Source\Repos\sdo-wcf\Client\obj\Debug\Client.exe
+E:\Git\Source\Repos\sdo-wcf\Client\obj\Debug\Client.pdb

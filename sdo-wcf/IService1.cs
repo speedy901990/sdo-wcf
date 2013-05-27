@@ -13,6 +13,11 @@ namespace sdo_wcf
     {
         [OperationContract]
         string GetData(int id);
+        [OperationContract]
+        string AddNewStudentLame(string _name, string _surn, bool batman, string _mail);
+        [OperationContract]
+        string TerriblyRetrieveDatabase();
+        [OperationContract]
         string SetData(string data);
         // TODO: Add your service operations here
     }

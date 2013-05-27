@@ -12,16 +12,73 @@
   <wsdl:message name="IService1_GetData_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetDataResponse" />
   </wsdl:message>
+  <wsdl:message name="IService1_AddNewStudentLame_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddNewStudentLame" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddNewStudentLame_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddNewStudentLameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_TerriblyRetrieveDatabase_InputMessage">
+    <wsdl:part name="parameters" element="tns:TerriblyRetrieveDatabase" />
+  </wsdl:message>
+  <wsdl:message name="IService1_TerriblyRetrieveDatabase_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TerriblyRetrieveDatabaseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SetData_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetData" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SetData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetDataResponse" />
+  </wsdl:message>
   <wsdl:portType name="IService1">
     <wsdl:operation name="GetData">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetData" message="tns:IService1_GetData_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetDataResponse" message="tns:IService1_GetData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddNewStudentLame">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AddNewStudentLame" message="tns:IService1_AddNewStudentLame_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AddNewStudentLameResponse" message="tns:IService1_AddNewStudentLame_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TerriblyRetrieveDatabase">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/TerriblyRetrieveDatabase" message="tns:IService1_TerriblyRetrieveDatabase_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/TerriblyRetrieveDatabaseResponse" message="tns:IService1_TerriblyRetrieveDatabase_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/SetData" message="tns:IService1_SetData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SetDataResponse" message="tns:IService1_SetData_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <wsdl:operation name="GetData">
       <soap:operation soapAction="http://tempuri.org/IService1/GetData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddNewStudentLame">
+      <soap:operation soapAction="http://tempuri.org/IService1/AddNewStudentLame" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TerriblyRetrieveDatabase">
+      <soap:operation soapAction="http://tempuri.org/IService1/TerriblyRetrieveDatabase" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetData">
+      <soap:operation soapAction="http://tempuri.org/IService1/SetData" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

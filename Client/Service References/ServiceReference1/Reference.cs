@@ -20,6 +20,24 @@ namespace Client.ServiceReference1 {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetData", ReplyAction="http://tempuri.org/IService1/GetDataResponse")]
         System.Threading.Tasks.Task<string> GetDataAsync(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/AddNewStudentLame", ReplyAction="http://tempuri.org/IService1/AddNewStudentLameResponse")]
+        string AddNewStudentLame(string _name, string _surn, bool batman, string _mail);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/AddNewStudentLame", ReplyAction="http://tempuri.org/IService1/AddNewStudentLameResponse")]
+        System.Threading.Tasks.Task<string> AddNewStudentLameAsync(string _name, string _surn, bool batman, string _mail);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/TerriblyRetrieveDatabase", ReplyAction="http://tempuri.org/IService1/TerriblyRetrieveDatabaseResponse")]
+        string TerriblyRetrieveDatabase();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/TerriblyRetrieveDatabase", ReplyAction="http://tempuri.org/IService1/TerriblyRetrieveDatabaseResponse")]
+        System.Threading.Tasks.Task<string> TerriblyRetrieveDatabaseAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/SetData", ReplyAction="http://tempuri.org/IService1/SetDataResponse")]
+        string SetData(string data);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/SetData", ReplyAction="http://tempuri.org/IService1/SetDataResponse")]
+        System.Threading.Tasks.Task<string> SetDataAsync(string data);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -55,6 +73,30 @@ namespace Client.ServiceReference1 {
         
         public System.Threading.Tasks.Task<string> GetDataAsync(int id) {
             return base.Channel.GetDataAsync(id);
+        }
+        
+        public string AddNewStudentLame(string _name, string _surn, bool batman, string _mail) {
+            return base.Channel.AddNewStudentLame(_name, _surn, batman, _mail);
+        }
+        
+        public System.Threading.Tasks.Task<string> AddNewStudentLameAsync(string _name, string _surn, bool batman, string _mail) {
+            return base.Channel.AddNewStudentLameAsync(_name, _surn, batman, _mail);
+        }
+        
+        public string TerriblyRetrieveDatabase() {
+            return base.Channel.TerriblyRetrieveDatabase();
+        }
+        
+        public System.Threading.Tasks.Task<string> TerriblyRetrieveDatabaseAsync() {
+            return base.Channel.TerriblyRetrieveDatabaseAsync();
+        }
+        
+        public string SetData(string data) {
+            return base.Channel.SetData(data);
+        }
+        
+        public System.Threading.Tasks.Task<string> SetDataAsync(string data) {
+            return base.Channel.SetDataAsync(data);
         }
     }
 }
