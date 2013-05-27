@@ -13,3 +13,13 @@ E:\Git\Source\Repos\sdo-wcf\sdo-wcf\bin\Debug\EntityFramework.dll
 E:\Git\Source\Repos\sdo-wcf\sdo-wcf\bin\Debug\EntityFramework.xml
 E:\Git\Source\Repos\sdo-wcf\sdo-wcf\obj\Debug\sdo-wcf.dll
 E:\Git\Source\Repos\sdo-wcf\sdo-wcf\obj\Debug\sdo-wcf.pdb
+F:\Git\Source\Repos\sdo-wcf\sdo-wcf\obj\Debug\sdo-wcf.csprojResolveAssemblyReference.cache
+F:\Git\Source\Repos\sdo-wcf\sdo-wcf\obj\Debug\sdo-wcf.dll
+F:\Git\Source\Repos\sdo-wcf\sdo-wcf\obj\Debug\sdo-wcf.pdb
+F:\Git\Source\Repos\sdo-wcf\sdo-wcf\bin\Debug\Database01.mdf
+F:\Git\Source\Repos\sdo-wcf\sdo-wcf\bin\Debug\Database01_log.ldf
+F:\Git\Source\Repos\sdo-wcf\sdo-wcf\bin\Debug\sdo-wcf.dll.config
+F:\Git\Source\Repos\sdo-wcf\sdo-wcf\bin\Debug\sdo-wcf.dll
+F:\Git\Source\Repos\sdo-wcf\sdo-wcf\bin\Debug\sdo-wcf.pdb
+F:\Git\Source\Repos\sdo-wcf\sdo-wcf\bin\Debug\EntityFramework.dll
+F:\Git\Source\Repos\sdo-wcf\sdo-wcf\bin\Debug\EntityFramework.xml
