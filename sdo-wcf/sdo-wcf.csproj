@@ -52,10 +52,26 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="InteractionModels\People.cs">
-      <DependentUpon>SDOLocalModel1.tt</DependentUpon>
-    </Compile>
     <Compile Include="InteractionModels\Person.cs">
+      <DependentUpon>SDOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InteractionModels\SDOModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SDOModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InteractionModels\SDOModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SDOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InteractionModels\SDOModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SDOModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="InteractionModels\SDOModelMethods.cs" />
+    <Compile Include="InteractionModels\People.cs">
       <DependentUpon>SDOLocalModel1.tt</DependentUpon>
     </Compile>
     <Compile Include="InteractionModels\SDOLocalMethods1.cs" />
@@ -116,6 +132,23 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>SDOLocalModel1.edmx</DependentUpon>
       <LastGenOutput>SDOLocalModel1.cs</LastGenOutput>
+    </None>
+    <EntityDeploy Include="InteractionModels\SDOModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>SDOModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="InteractionModels\SDOModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SDOModel.edmx</DependentUpon>
+      <LastGenOutput>SDOModel.Context.cs</LastGenOutput>
+    </None>
+    <None Include="InteractionModels\SDOModel.edmx.diagram">
+      <DependentUpon>SDOModel.edmx</DependentUpon>
+    </None>
+    <None Include="InteractionModels\SDOModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SDOModel.edmx</DependentUpon>
+      <LastGenOutput>SDOModel.cs</LastGenOutput>
     </None>
     <None Include="InteractionModels\SDOModel1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>

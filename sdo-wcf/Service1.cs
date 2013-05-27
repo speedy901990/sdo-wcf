@@ -4,6 +4,7 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
+using sdo_wcf.InteractionModels;
 
 namespace sdo_wcf
 {
@@ -12,23 +13,35 @@ namespace sdo_wcf
     {
         public string GetData(int id)
         {
-            return string.Format("You entered: {0}", id);
+            //return string.Format("You entered: {0}", id);
             //TODO zwracanie obiektu zawierajacego dane
+
+            SDOModelMethods sdomm = new SDOModelMethods();
+
+            Person p = sdomm.getPerson(id);
+
+            return string.Format("{0} {1}", p.Name, p.Surname);
         }
 
         public string AddNewStudentLame(string _name, string _surn, bool batman, string _mail)
         {
-            InteractionModels.SDOLocalMethods1 sdolm = new InteractionModels.SDOLocalMethods1();
-            sdolm.addPerson(_name, _surn, batman, _mail);
+            //InteractionModels.SDOLocalMethods1 sdolm = new InteractionModels.SDOLocalMethods1();
+            //sdolm.addPerson(_name, _surn, batman, _mail);
+
+            SDOModelMethods sdomm = new SDOModelMethods();
+
+            sdomm.addPerson(_name, _surn, batman, _mail);
+
             return "Done.";
         }
 
         public string TerriblyRetrieveDatabase()
         {
-            InteractionModels.SDOLocalMethods1 sdolm = new InteractionModels.SDOLocalMethods1();
+            string sp = "aa";
+            SDOModelMethods sdolm = new SDOModelMethods();
             List<InteractionModels.Person> pp = new List<InteractionModels.Person>();
             pp = sdolm.GetListOfPeople();
-            string sp = pp.ToString(); // Istnieje specjalne miejsce w piekle dla ludzi, którzy robią coś takiego.
+            sp = pp.ToString(); // Istnieje specjalne miejsce w piekle dla ludzi, którzy robią coś takiego.
             return sp;
         }
 

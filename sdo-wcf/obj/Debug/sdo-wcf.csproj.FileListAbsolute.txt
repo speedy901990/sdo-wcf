@@ -23,3 +23,12 @@ F:\Git\Source\Repos\sdo-wcf\sdo-wcf\bin\Debug\sdo-wcf.dll
 F:\Git\Source\Repos\sdo-wcf\sdo-wcf\bin\Debug\sdo-wcf.pdb
 F:\Git\Source\Repos\sdo-wcf\sdo-wcf\bin\Debug\EntityFramework.dll
 F:\Git\Source\Repos\sdo-wcf\sdo-wcf\bin\Debug\EntityFramework.xml
+C:\Users\Dariusz\Source\Repos\sdo-wcf\sdo-wcf\bin\Debug\Database01.mdf
+C:\Users\Dariusz\Source\Repos\sdo-wcf\sdo-wcf\bin\Debug\Database01_log.ldf
+C:\Users\Dariusz\Source\Repos\sdo-wcf\sdo-wcf\bin\Debug\sdo-wcf.dll.config
+C:\Users\Dariusz\Source\Repos\sdo-wcf\sdo-wcf\bin\Debug\sdo-wcf.dll
+C:\Users\Dariusz\Source\Repos\sdo-wcf\sdo-wcf\bin\Debug\sdo-wcf.pdb
+C:\Users\Dariusz\Source\Repos\sdo-wcf\sdo-wcf\bin\Debug\EntityFramework.dll
+C:\Users\Dariusz\Source\Repos\sdo-wcf\sdo-wcf\bin\Debug\EntityFramework.xml
+C:\Users\Dariusz\Source\Repos\sdo-wcf\sdo-wcf\obj\Debug\sdo-wcf.dll
+C:\Users\Dariusz\Source\Repos\sdo-wcf\sdo-wcf\obj\Debug\sdo-wcf.pdb
