@@ -21,6 +21,18 @@ namespace Client.ServiceReference1 {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetData", ReplyAction="http://tempuri.org/IService1/GetDataResponse")]
         System.Threading.Tasks.Task<string> GetDataAsync(int id);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetDataByEmail", ReplyAction="http://tempuri.org/IService1/GetDataByEmailResponse")]
+        string GetDataByEmail(string email);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetDataByEmail", ReplyAction="http://tempuri.org/IService1/GetDataByEmailResponse")]
+        System.Threading.Tasks.Task<string> GetDataByEmailAsync(string email);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetDataBySurname", ReplyAction="http://tempuri.org/IService1/GetDataBySurnameResponse")]
+        string GetDataBySurname(string surname);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetDataBySurname", ReplyAction="http://tempuri.org/IService1/GetDataBySurnameResponse")]
+        System.Threading.Tasks.Task<string> GetDataBySurnameAsync(string surname);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/AddNewStudentLame", ReplyAction="http://tempuri.org/IService1/AddNewStudentLameResponse")]
         string AddNewStudentLame(string _name, string _surn, bool batman, string _mail);
         
@@ -73,6 +85,22 @@ namespace Client.ServiceReference1 {
         
         public System.Threading.Tasks.Task<string> GetDataAsync(int id) {
             return base.Channel.GetDataAsync(id);
+        }
+        
+        public string GetDataByEmail(string email) {
+            return base.Channel.GetDataByEmail(email);
+        }
+        
+        public System.Threading.Tasks.Task<string> GetDataByEmailAsync(string email) {
+            return base.Channel.GetDataByEmailAsync(email);
+        }
+        
+        public string GetDataBySurname(string surname) {
+            return base.Channel.GetDataBySurname(surname);
+        }
+        
+        public System.Threading.Tasks.Task<string> GetDataBySurnameAsync(string surname) {
+            return base.Channel.GetDataBySurnameAsync(surname);
         }
         
         public string AddNewStudentLame(string _name, string _surn, bool batman, string _mail) {

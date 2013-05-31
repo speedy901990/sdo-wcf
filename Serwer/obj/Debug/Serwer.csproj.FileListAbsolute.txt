@@ -54,3 +54,7 @@ C:\Users\Dariusz\Source\Repos\sdo-wcf\Serwer\obj\Debug\Serwer.csprojResolveAssem
 C:\Users\Dariusz\Source\Repos\sdo-wcf\Serwer\obj\Debug\Serwer.Form1.resources
 C:\Users\Dariusz\Source\Repos\sdo-wcf\Serwer\obj\Debug\Serwer.Properties.Resources.resources
 C:\Users\Dariusz\Source\Repos\sdo-wcf\Serwer\obj\Debug\Serwer.csproj.GenerateResource.Cache
+C:\Users\slk18_000\documents\visual studio 2012\Projects\sdo-wcf\Serwer\bin\Debug\Database01.mdf
+C:\Users\slk18_000\documents\visual studio 2012\Projects\sdo-wcf\Serwer\bin\Debug\Database01_log.ldf
+C:\Users\slk18_000\documents\visual studio 2012\Projects\sdo-wcf\Serwer\bin\Debug\EntityFramework.dll
+C:\Users\slk18_000\documents\visual studio 2012\Projects\sdo-wcf\Serwer\bin\Debug\EntityFramework.xml

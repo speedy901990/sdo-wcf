@@ -12,6 +12,18 @@
   <wsdl:message name="IService1_GetData_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetDataResponse" />
   </wsdl:message>
+  <wsdl:message name="IService1_GetDataByEmail_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataByEmail" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetDataByEmail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataByEmailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetDataBySurname_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataBySurname" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetDataBySurname_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataBySurnameResponse" />
+  </wsdl:message>
   <wsdl:message name="IService1_AddNewStudentLame_InputMessage">
     <wsdl:part name="parameters" element="tns:AddNewStudentLame" />
   </wsdl:message>
@@ -35,6 +47,14 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetData" message="tns:IService1_GetData_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetDataResponse" message="tns:IService1_GetData_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="GetDataByEmail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetDataByEmail" message="tns:IService1_GetDataByEmail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetDataByEmailResponse" message="tns:IService1_GetDataByEmail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataBySurname">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetDataBySurname" message="tns:IService1_GetDataBySurname_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetDataBySurnameResponse" message="tns:IService1_GetDataBySurname_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="AddNewStudentLame">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/AddNewStudentLame" message="tns:IService1_AddNewStudentLame_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/AddNewStudentLameResponse" message="tns:IService1_AddNewStudentLame_OutputMessage" />
@@ -52,6 +72,24 @@
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <wsdl:operation name="GetData">
       <soap:operation soapAction="http://tempuri.org/IService1/GetData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataByEmail">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetDataByEmail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataBySurname">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetDataBySurname" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

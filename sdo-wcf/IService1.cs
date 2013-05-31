@@ -15,6 +15,10 @@ namespace sdo_wcf
         [OperationContract]
         string GetData(int id);
         [OperationContract]
+        string GetDataByEmail(string email);
+        [OperationContract]
+        string GetDataBySurname(string surname);
+        [OperationContract]
         string AddNewStudentLame(string _name, string _surn, bool batman, string _mail);
         [OperationContract]
         string TerriblyRetrieveDatabase();

@@ -32,3 +32,7 @@ C:\Users\Dariusz\Source\Repos\sdo-wcf\sdo-wcf\bin\Debug\EntityFramework.dll
 C:\Users\Dariusz\Source\Repos\sdo-wcf\sdo-wcf\bin\Debug\EntityFramework.xml
 C:\Users\Dariusz\Source\Repos\sdo-wcf\sdo-wcf\obj\Debug\sdo-wcf.dll
 C:\Users\Dariusz\Source\Repos\sdo-wcf\sdo-wcf\obj\Debug\sdo-wcf.pdb
+C:\Users\slk18_000\documents\visual studio 2012\Projects\sdo-wcf\sdo-wcf\bin\Debug\Database01.mdf
+C:\Users\slk18_000\documents\visual studio 2012\Projects\sdo-wcf\sdo-wcf\bin\Debug\Database01_log.ldf
+C:\Users\slk18_000\documents\visual studio 2012\Projects\sdo-wcf\sdo-wcf\bin\Debug\EntityFramework.dll
+C:\Users\slk18_000\documents\visual studio 2012\Projects\sdo-wcf\sdo-wcf\bin\Debug\EntityFramework.xml

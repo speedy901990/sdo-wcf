@@ -26,13 +26,12 @@ namespace Client
         {
             string str1 = client.TerriblyRetrieveDatabase();
             MessageBox.Show(str1);
-
         }
 
         private void sendButton_Click(object sender, EventArgs e)
         {
-            int id = 3;
-            id = Int32.Parse(textBox1.Text);
+            int id;
+            id = Int32.Parse(tbID.Text);
             // O, proszę - tu jest bardzo ładne RMI. Prawda? :]
             result = client.GetData(id);
 
@@ -41,9 +40,23 @@ namespace Client
 
         private void addButton_Click(object sender, EventArgs e)
         {
-            string err = client.AddNewStudentLame(nameTextBox.Text, surnameTextBox.Text, studentCheckBox.Checked, emailTextBox.Text);
-
+            string err = client.AddNewStudentLame(nameTextBox.Text, surnameTextBox.Text, studentCheckBox.Checked, emailTextBox.Text); //to dziala? bo albo ja nie umiem uzywac albo cos jest nie tak
+            //poza tym baza nie powinna byc na serwerze? W sensie w projekcie o nazwie Serwer.
             MessageBox.Show(err);
+        }
+
+        private void getByEmailButton_Click(object sender, EventArgs e)
+        {
+            result = client.GetDataByEmail(tbEmail.Text);
+
+            MessageBox.Show(result);
+        }
+
+        private void getBySurnameButton_Click(object sender, EventArgs e)
+        {
+            result = client.GetDataBySurname(tbSurname.Text);
+
+            MessageBox.Show(result);
         }
     }
 }

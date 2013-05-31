@@ -36,6 +36,30 @@ namespace sdo_wcf.InteractionModels
             return r;
         }
 
+        public Person getPersonBySurname(string surname)
+        {
+            DBEntities db = new DBEntities();
+            Person r = new Person();
+
+            r = (from rr in db.People
+                 where rr.Surname == surname
+                 select rr).First();
+
+            return r;
+        }
+
+        public Person getPersonByEmail(string email)
+        {
+            DBEntities db = new DBEntities();
+            Person r = new Person();
+
+            r = (from rr in db.People
+                 where rr.Email == email
+                 select rr).First();
+
+            return r;
+        }
+
         public void addPerson(string name, string surname, bool student, string email)
         {
             DBEntities db = new DBEntities();

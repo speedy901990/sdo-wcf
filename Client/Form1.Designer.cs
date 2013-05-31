@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.sendButton = new System.Windows.Forms.Button();
+            this.tbID = new System.Windows.Forms.TextBox();
+            this.getByIDButton = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.addButton = new System.Windows.Forms.Button();
             this.nameTextBox = new System.Windows.Forms.TextBox();
@@ -40,24 +40,28 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.getByEmailButton = new System.Windows.Forms.Button();
+            this.getBySurnameButton = new System.Windows.Forms.Button();
+            this.tbEmail = new System.Windows.Forms.TextBox();
+            this.tbSurname = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // textBox1
+            // tbID
             // 
-            this.textBox1.Location = new System.Drawing.Point(249, 17);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(49, 20);
-            this.textBox1.TabIndex = 0;
+            this.tbID.Location = new System.Drawing.Point(213, 17);
+            this.tbID.Name = "tbID";
+            this.tbID.Size = new System.Drawing.Size(85, 20);
+            this.tbID.TabIndex = 0;
             // 
-            // sendButton
+            // getByIDButton
             // 
-            this.sendButton.Location = new System.Drawing.Point(304, 15);
-            this.sendButton.Name = "sendButton";
-            this.sendButton.Size = new System.Drawing.Size(75, 23);
-            this.sendButton.TabIndex = 1;
-            this.sendButton.Text = "Send";
-            this.sendButton.UseVisualStyleBackColor = true;
-            this.sendButton.Click += new System.EventHandler(this.sendButton_Click);
+            this.getByIDButton.Location = new System.Drawing.Point(304, 15);
+            this.getByIDButton.Name = "getByIDButton";
+            this.getByIDButton.Size = new System.Drawing.Size(133, 23);
+            this.getByIDButton.TabIndex = 1;
+            this.getByIDButton.Text = "Get Person By ID";
+            this.getByIDButton.UseVisualStyleBackColor = true;
+            this.getByIDButton.Click += new System.EventHandler(this.sendButton_Click);
             // 
             // button2
             // 
@@ -147,11 +151,49 @@
             this.label4.TabIndex = 11;
             this.label4.Text = "Student";
             // 
+            // getByEmailButton
+            // 
+            this.getByEmailButton.Location = new System.Drawing.Point(304, 45);
+            this.getByEmailButton.Name = "getByEmailButton";
+            this.getByEmailButton.Size = new System.Drawing.Size(133, 23);
+            this.getByEmailButton.TabIndex = 12;
+            this.getByEmailButton.Text = "Get Person By Email";
+            this.getByEmailButton.UseVisualStyleBackColor = true;
+            this.getByEmailButton.Click += new System.EventHandler(this.getByEmailButton_Click);
+            // 
+            // getBySurnameButton
+            // 
+            this.getBySurnameButton.Location = new System.Drawing.Point(304, 75);
+            this.getBySurnameButton.Name = "getBySurnameButton";
+            this.getBySurnameButton.Size = new System.Drawing.Size(133, 23);
+            this.getBySurnameButton.TabIndex = 13;
+            this.getBySurnameButton.Text = "Get Person By Surname";
+            this.getBySurnameButton.UseVisualStyleBackColor = true;
+            this.getBySurnameButton.Click += new System.EventHandler(this.getBySurnameButton_Click);
+            // 
+            // tbEmail
+            // 
+            this.tbEmail.Location = new System.Drawing.Point(213, 47);
+            this.tbEmail.Name = "tbEmail";
+            this.tbEmail.Size = new System.Drawing.Size(85, 20);
+            this.tbEmail.TabIndex = 14;
+            // 
+            // tbSurname
+            // 
+            this.tbSurname.Location = new System.Drawing.Point(213, 77);
+            this.tbSurname.Name = "tbSurname";
+            this.tbSurname.Size = new System.Drawing.Size(85, 20);
+            this.tbSurname.TabIndex = 15;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(391, 212);
+            this.ClientSize = new System.Drawing.Size(506, 301);
+            this.Controls.Add(this.tbSurname);
+            this.Controls.Add(this.tbEmail);
+            this.Controls.Add(this.getBySurnameButton);
+            this.Controls.Add(this.getByEmailButton);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -162,8 +204,8 @@
             this.Controls.Add(this.nameTextBox);
             this.Controls.Add(this.addButton);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.sendButton);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.getByIDButton);
+            this.Controls.Add(this.tbID);
             this.Name = "Form1";
             this.Text = "Client";
             this.ResumeLayout(false);
@@ -173,8 +215,8 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button sendButton;
+        private System.Windows.Forms.TextBox tbID;
+        private System.Windows.Forms.Button getByIDButton;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button addButton;
         private System.Windows.Forms.TextBox nameTextBox;
@@ -185,6 +227,10 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button getByEmailButton;
+        private System.Windows.Forms.Button getBySurnameButton;
+        private System.Windows.Forms.TextBox tbEmail;
+        private System.Windows.Forms.TextBox tbSurname;
     }
 }
 

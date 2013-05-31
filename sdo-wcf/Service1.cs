@@ -29,6 +29,42 @@ namespace sdo_wcf
             return string.Format("{0} {1}, {2}, student: {3}", p.Name, p.Surname, p.Email, p.Student);
         }
 
+        public string GetDataBySurname(string surname)
+        {
+            //return string.Format("You entered: {0}", id);
+            //TODO zwracanie obiektu zawierajacego dane
+
+            SDOModelMethods sdomm = new SDOModelMethods();
+            Person p = new Person();
+            try
+            {
+                p = sdomm.getPersonBySurname(surname);
+            }
+            catch (Exception e)
+            {
+                return e.Message;
+            }
+            return string.Format("{0} {1}, {2}, student: {3}", p.Name, p.Surname, p.Email, p.Student);
+        }
+
+        public string GetDataByEmail(string email)
+        {
+            //return string.Format("You entered: {0}", id);
+            //TODO zwracanie obiektu zawierajacego dane
+
+            SDOModelMethods sdomm = new SDOModelMethods();
+            Person p = new Person();
+            try
+            {
+                p = sdomm.getPersonByEmail(email);
+            }
+            catch (Exception e)
+            {
+                return e.Message;
+            }
+            return string.Format("{0} {1}, {2}, student: {3}", p.Name, p.Surname, p.Email, p.Student);
+        }
+
         public string AddNewStudentLame(string _name, string _surn, bool batman, string _mail)
         {
             //InteractionModels.SDOLocalMethods1 sdolm = new InteractionModels.SDOLocalMethods1();
