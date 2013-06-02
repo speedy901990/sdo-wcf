@@ -23,3 +23,4 @@ C:\Users\Dariusz\Source\Repos\sdo-wcf\Client\obj\Debug\Client.Properties.Resourc
 C:\Users\Dariusz\Source\Repos\sdo-wcf\Client\obj\Debug\Client.csproj.GenerateResource.Cache
 C:\Users\Dariusz\Source\Repos\sdo-wcf\Client\obj\Debug\Client.Form1.resources
 C:\Users\slk18_000\documents\visual studio 2012\Projects\sdo-wcf\Client\obj\Debug\Client.csprojResolveAssemblyReference.cache
+C:\Users\Dariusz\Source\Repos\sdo-wcf\Client\obj\Debug\Client.csprojResolveAssemblyReference.cache

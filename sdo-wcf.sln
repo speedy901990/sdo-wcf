@@ -10,6 +10,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client", "Client\Client.csp
 		{15B3E0D2-6217-493A-A690-158C497F5318} = {15B3E0D2-6217-493A-A690-158C497F5318}
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sdo-wcf2", "sdo-wcf2\sdo-wcf2.csproj", "{141D3CF8-D2F8-488E-9EC9-1D206E31C283}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -28,6 +30,10 @@ Global
 		{70E0C49F-3C64-4850-B5A3-E7789F55DC5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{70E0C49F-3C64-4850-B5A3-E7789F55DC5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{70E0C49F-3C64-4850-B5A3-E7789F55DC5B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{141D3CF8-D2F8-488E-9EC9-1D206E31C283}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{141D3CF8-D2F8-488E-9EC9-1D206E31C283}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{141D3CF8-D2F8-488E-9EC9-1D206E31C283}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{141D3CF8-D2F8-488E-9EC9-1D206E31C283}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
