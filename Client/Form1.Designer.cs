@@ -207,7 +207,7 @@
             this.Controls.Add(this.getByIDButton);
             this.Controls.Add(this.tbID);
             this.Name = "Form1";
-            this.Text = "Client";
+            this.Text = "Minor DB Manager";
             this.ResumeLayout(false);
             this.PerformLayout();
 

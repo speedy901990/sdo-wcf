@@ -24,3 +24,12 @@ C:\Users\Dariusz\Source\Repos\sdo-wcf\Client\obj\Debug\Client.csproj.GenerateRes
 C:\Users\Dariusz\Source\Repos\sdo-wcf\Client\obj\Debug\Client.Form1.resources
 C:\Users\slk18_000\documents\visual studio 2012\Projects\sdo-wcf\Client\obj\Debug\Client.csprojResolveAssemblyReference.cache
 C:\Users\Dariusz\Source\Repos\sdo-wcf\Client\obj\Debug\Client.csprojResolveAssemblyReference.cache
+F:\Git\Source\Repos\sdo-wcf\Client\bin\Debug\Client.exe.config
+F:\Git\Source\Repos\sdo-wcf\Client\bin\Debug\Client.exe
+F:\Git\Source\Repos\sdo-wcf\Client\bin\Debug\Client.pdb
+F:\Git\Source\Repos\sdo-wcf\Client\obj\Debug\Client.csprojResolveAssemblyReference.cache
+F:\Git\Source\Repos\sdo-wcf\Client\obj\Debug\Client.Form1.resources
+F:\Git\Source\Repos\sdo-wcf\Client\obj\Debug\Client.Properties.Resources.resources
+F:\Git\Source\Repos\sdo-wcf\Client\obj\Debug\Client.csproj.GenerateResource.Cache
+F:\Git\Source\Repos\sdo-wcf\Client\obj\Debug\Client.exe
+F:\Git\Source\Repos\sdo-wcf\Client\obj\Debug\Client.pdb

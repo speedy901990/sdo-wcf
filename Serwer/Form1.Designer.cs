@@ -57,7 +57,7 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button1);
             this.Name = "Form1";
-            this.Text = "Server";
+            this.Text = "Central Manager";
             this.ResumeLayout(false);
             this.PerformLayout();
 
