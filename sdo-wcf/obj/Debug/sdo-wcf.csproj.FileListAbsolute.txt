@@ -37,3 +37,13 @@ C:\Users\slk18_000\documents\visual studio 2012\Projects\sdo-wcf\sdo-wcf\bin\Deb
 C:\Users\slk18_000\documents\visual studio 2012\Projects\sdo-wcf\sdo-wcf\bin\Debug\EntityFramework.dll
 C:\Users\slk18_000\documents\visual studio 2012\Projects\sdo-wcf\sdo-wcf\bin\Debug\EntityFramework.xml
 C:\Users\Dariusz\Source\Repos\sdo-wcf\sdo-wcf\obj\Debug\sdo-wcf.csprojResolveAssemblyReference.cache
+C:\Git\Source\Repos\sdo-wcf\sdo-wcf\bin\Debug\Database01.mdf
+C:\Git\Source\Repos\sdo-wcf\sdo-wcf\bin\Debug\Database01_log.ldf
+C:\Git\Source\Repos\sdo-wcf\sdo-wcf\bin\Debug\sdo-wcf.dll.config
+C:\Git\Source\Repos\sdo-wcf\sdo-wcf\bin\Debug\sdo-wcf.dll
+C:\Git\Source\Repos\sdo-wcf\sdo-wcf\bin\Debug\sdo-wcf.pdb
+C:\Git\Source\Repos\sdo-wcf\sdo-wcf\bin\Debug\EntityFramework.dll
+C:\Git\Source\Repos\sdo-wcf\sdo-wcf\bin\Debug\EntityFramework.xml
+C:\Git\Source\Repos\sdo-wcf\sdo-wcf\obj\Debug\sdo-wcf.dll
+C:\Git\Source\Repos\sdo-wcf\sdo-wcf\obj\Debug\sdo-wcf.pdb
+C:\Git\Source\Repos\sdo-wcf\sdo-wcf\obj\Debug\sdo-wcf.csprojResolveAssemblyReference.cache

@@ -10,6 +10,9 @@ using System.Threading.Tasks;
 // To jest dobre do debugowania, ale można się nieźle zdziwić.
 //          -- Kamil
 
+// Powyższy komentarz to bzdura
+//          -- Też Kamil
+
 namespace sdo_wcf.InteractionModels
 {
     class SDOModelMethods
@@ -24,14 +27,59 @@ namespace sdo_wcf.InteractionModels
             return query.ToList();
         }
 
+        public List<String> GetMatchingSurnames(string __surname)
+        {
+            DBEntities db = new DBEntities();
+            Person p = new Person();
+            var query = from r in db.People
+                        where r.Surname == __surname
+                        select r;
+            var qry = query.ToList();
+            var qrarr = new List<String>();
+            foreach (Person pp in qry)
+            {
+                // Don't make me ever do this again.
+                qrarr.Add(string.Format("{0}%%%{1}%%%{2}%%%{3}%%%{4}", pp.Name, pp.Surname, pp.Email, pp.pssl, pp.Student));
+            }
+            return qrarr;           
+        }
+
+        public List<String> LeakMe()
+        {
+            DBEntities db = new DBEntities();
+            Person p = new Person();
+            var query = from r in db.People
+                        select r;
+            var qry = query.ToList();
+            var qrarr = new List<String>();
+            foreach (Person pp in qry)
+            {
+                // Don't make me ever do this again.
+                qrarr.Add(string.Format("{0}%%%{1}%%%{2}%%%{3}%%%{4}%%%{5}", pp.Id, pp.Name, pp.Surname, pp.Email, pp.pssl, pp.Student));
+            }
+            return qrarr;
+        }
+
         public Person getPerson(int id)
         {
             DBEntities db = new DBEntities();
             Person r = new Person();
 
             r = (from rr in db.People
-                        where rr.Id == id
-                        select rr).First();
+                 where rr.Id == id
+                 select rr).First();
+
+            return r;
+        }
+
+        public Person getPersonByGLID(int pss)
+        {
+            DBEntities db = new DBEntities();
+            Person r = new Person();
+
+            r = (from rr in db.People
+                        where rr.pssl == pss
+                        select rr).FirstOrDefault();
 
             return r;
         }
@@ -44,6 +92,7 @@ namespace sdo_wcf.InteractionModels
             r = (from rr in db.People
                  where rr.Surname == surname
                  select rr).First();
+            //if(r.Any())
 
             return r;
         }
@@ -55,12 +104,12 @@ namespace sdo_wcf.InteractionModels
 
             r = (from rr in db.People
                  where rr.Email == email
-                 select rr).First();
+                 select rr).FirstOrDefault();
 
             return r;
         }
 
-        public void addPerson(string name, string surname, bool student, string email)
+        public void addPerson(string name, string surname, bool student, string pld, string email)
         {
             DBEntities db = new DBEntities();
 
@@ -69,6 +118,7 @@ namespace sdo_wcf.InteractionModels
             p.Name = name;
             p.Surname = surname;
             p.Student = student;
+            p.pssl = Convert.ToInt32(pld);
             p.Email = email;
 
             db.People.Add(p);

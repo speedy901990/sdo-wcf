@@ -12,16 +12,42 @@ namespace sdo_wcf2
     public interface ISecondServer
     {
         [OperationContract]
-        string GetData(int id);
+        string TerriblyRetrieveDatabase();
+       
+        //string[] GetEntriesByName(string surname);
 
-        [OperationContract]
-        string AddNewStudent(string _name, string _surn, bool batman, string _mail, float height, float weight);
+        // TODO: Add your service operations here
 
-        [OperationContract]
-        string SetData(string data);
 
         // TODO: Add your service operations here
     }
+
+    [ServiceContract]
+    public interface IRemotingDB
+    {
+        [OperationContract]
+        string MakeDatabasesSynced();
+    }
+
+    [ServiceContract]
+    public interface IInternalServices
+    {
+        [OperationContract]
+        string GetData(int id, bool mod);
+        [OperationContract]
+        string GetDataByEmail(string email);
+        [OperationContract]
+        string GetDataBySurname(string surname);
+        [OperationContract]
+        string AddNewStudent(string _name, string _surn, bool batman, string _mail, float height, float weight);
+        [OperationContract]
+        string NukeStudent(int id);
+        [OperationContract]
+        List<String> GetEntriesByName(string surname);
+        [OperationContract]
+        string SetData(string data);
+    }
+
 
     // Use a data contract as illustrated in the sample below to add composite types to service operations.
     // You can add XSD files into the project. After building the project, you can directly use the data types defined there, with the namespace "sdo_wcf2.ContractType".

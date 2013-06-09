@@ -33,3 +33,12 @@ F:\Git\Source\Repos\sdo-wcf\Client\obj\Debug\Client.Properties.Resources.resourc
 F:\Git\Source\Repos\sdo-wcf\Client\obj\Debug\Client.csproj.GenerateResource.Cache
 F:\Git\Source\Repos\sdo-wcf\Client\obj\Debug\Client.exe
 F:\Git\Source\Repos\sdo-wcf\Client\obj\Debug\Client.pdb
+C:\Git\Source\Repos\sdo-wcf\Client\bin\Debug\Client.exe.config
+C:\Git\Source\Repos\sdo-wcf\Client\bin\Debug\Client.exe
+C:\Git\Source\Repos\sdo-wcf\Client\bin\Debug\Client.pdb
+C:\Git\Source\Repos\sdo-wcf\Client\obj\Debug\Client.Form1.resources
+C:\Git\Source\Repos\sdo-wcf\Client\obj\Debug\Client.Properties.Resources.resources
+C:\Git\Source\Repos\sdo-wcf\Client\obj\Debug\Client.csproj.GenerateResource.Cache
+C:\Git\Source\Repos\sdo-wcf\Client\obj\Debug\Client.exe
+C:\Git\Source\Repos\sdo-wcf\Client\obj\Debug\Client.pdb
+C:\Git\Source\Repos\sdo-wcf\Client\obj\Debug\Client.csprojResolveAssemblyReference.cache

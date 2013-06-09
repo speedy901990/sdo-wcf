@@ -4,6 +4,7 @@
     <EntitySetMapping Name="People">
       <EntityTypeMapping TypeName="Database01Model2.Person">
         <MappingFragment StoreEntitySet="People">
+          <ScalarProperty Name="pssl" ColumnName="pssl" />
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="Surname" ColumnName="Surname" />

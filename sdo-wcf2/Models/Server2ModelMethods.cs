@@ -77,5 +77,59 @@ namespace sdo_wcf2.Models
 
             db.SaveChanges();
         }
+
+        public Patient getPersonByGLID(int pss)
+        {
+            Server2DatabaseEntities db = new Server2DatabaseEntities();
+            Patient r = new Patient();
+
+            r = (from rr in db.Patients
+                 where rr.pssl == pss
+                 select rr).FirstOrDefault();
+
+            return r;
+        }
+
+        public Patient getPersonBySurname(string surname)
+        {
+            Server2DatabaseEntities db = new Server2DatabaseEntities();
+            Patient r = new Patient();
+
+            r = (from rr in db.Patients
+                 where rr.Surname == surname
+                 select rr).First();
+            //if(r.Any())
+
+            return r;
+        }
+
+        public List<String> GetMatchingSurnames(string __surname)
+        {
+            Server2DatabaseEntities db = new Server2DatabaseEntities();
+            Patient p = new Patient();
+            var query = from r in db.Patients
+                        where r.Surname == __surname
+                        select r;
+            var qry = query.ToList();
+            var qrarr = new List<String>();
+            foreach (Patient pp in qry)
+            {
+                // Don't make me ever do this again.
+                qrarr.Add(string.Format("{0}%%%{1}%%%{2}%%%{3}%%%{4}%%%{5}%%%{6}", pp.Name, pp.Surname, pp.Email, pp.pssl, pp.Student, pp.Height, pp.Weight));
+            }
+            return qrarr;
+        }
+
+        public Patient getPersonByEmail(string email)
+        {
+            Server2DatabaseEntities db = new Server2DatabaseEntities();
+            Patient r = new Patient();
+
+            r = (from rr in db.Patients
+                 where rr.Email == email
+                 select rr).FirstOrDefault();
+
+            return r;
+        }
     }
 }

@@ -19,5 +19,6 @@ namespace sdo_wcf.InteractionModels
         public string Surname { get; set; }
         public string Email { get; set; }
         public Nullable<bool> Student { get; set; }
+        public Nullable<int> pssl { get; set; }
     }
 }

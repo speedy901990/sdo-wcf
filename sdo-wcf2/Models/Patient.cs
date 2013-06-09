@@ -21,5 +21,6 @@ namespace sdo_wcf2.Models
         public Nullable<bool> Student { get; set; }
         public Nullable<double> Height { get; set; }
         public Nullable<double> Weight { get; set; }
+        public Nullable<double> pssl { get; set; }
     }
 }

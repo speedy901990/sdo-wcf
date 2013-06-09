@@ -13,7 +13,7 @@ namespace Client
 {
     public partial class Form1 : Form
     {
-        Service1Client client = new Service1Client();
+        Service1Client client = new Service1Client("wsHttpEndpoint");
 
         string result;
 
@@ -33,23 +33,37 @@ namespace Client
             int id;
             id = Int32.Parse(tbID.Text);
             // O, proszę - tu jest bardzo ładne RMI. Prawda? :]
-            result = client.GetData(id);
+            result = client.GetData(id, false);
 
             MessageBox.Show(result);
         }
 
         private void addButton_Click(object sender, EventArgs e)
         {
-            string err = client.AddNewStudentLame(nameTextBox.Text, surnameTextBox.Text, studentCheckBox.Checked, emailTextBox.Text); //to dziala? bo albo ja nie umiem uzywac albo cos jest nie tak
-            //poza tym baza nie powinna byc na serwerze? W sensie w projekcie o nazwie Serwer.
+            string err = client.AddNewStudentLame(nameTextBox.Text, surnameTextBox.Text, studentCheckBox.Checked, PeseltextBox.Text, emailTextBox.Text); 
             MessageBox.Show(err);
         }
 
         private void getByEmailButton_Click(object sender, EventArgs e)
         {
+            foreach (ListViewItem litem in listView1.Items)
+            {
+                listView1.Items.Remove(litem);
+            }
             result = client.GetDataByEmail(tbEmail.Text);
+            if (result.Length == 0)
+            {
+                MessageBox.Show("Brak wyników", " ", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                string[] ciach = System.Text.RegularExpressions.Regex.Split(result, "%%%");
+                imageList1.Images.Add(Client.Properties.Resources.chase);
+                var item1 = new ListViewItem(new[] { ciach[3], ciach[0], ciach[1], ciach[2], ciach[4] });
+                item1.ImageIndex = 0;
+                listView1.Items.Add(item1);
 
-            MessageBox.Show(result);
+            }
         }
 
         private void getBySurnameButton_Click(object sender, EventArgs e)
@@ -57,6 +71,90 @@ namespace Client
             result = client.GetDataBySurname(tbSurname.Text);
 
             MessageBox.Show(result);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            if (listView1.SelectedItems.Count != 0)
+            {
+                var selpsl = listView1.SelectedItems[0].Text;
+                int ipesel = Convert.ToInt32(selpsl);
+                string restmp1 = client.GetData(ipesel, true);
+                string[] ciach = System.Text.RegularExpressions.Regex.Split(restmp1, "%%%");
+                string msgcaption = "Czy na pewno usunąć zioma o PESELU " + ipesel + "?";
+                DialogResult dr1 = MessageBox.Show(this, msgcaption, "  ",MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2, 0);
+                if (dr1 == System.Windows.Forms.DialogResult.Yes)
+                {
+                    MessageBox.Show(client.NukeStudent(Convert.ToInt32(ciach[5])));
+                    foreach (ListViewItem litem in listView1.Items)
+                    {
+                        listView1.Items.Remove(litem);
+                    }
+                }
+                
+            }
+
+            //client.
+            //imageList1.Images.Add(Client.Properties.Resources.chase);
+            //listView1.LargeImageList = this.imageList1;
+            //var item1 = new ListViewItem(new[] { "GID" , "Imie", "Nazwisko", "Adres", "Yup"});
+            //item1.ImageIndex = 0;
+            //this.listView1.Items.Add(item1);
+
+                        
+        }
+
+        private void populateSurnamesButton_Click(object sender, EventArgs e)
+        {
+            foreach (ListViewItem litem in listView1.Items)
+            {
+                listView1.Items.Remove(litem);
+            }
+            string[] rslt = client.GetEntriesByName(tbSurname.Text);
+            int leng = rslt.Length;
+            if (leng == 0)
+                MessageBox.Show("Brak wyników.");
+            foreach (string rsurname in rslt)
+            {
+                //MessageBox.Show(rsurname);
+                string[] ciach = System.Text.RegularExpressions.Regex.Split(rsurname, "%%%");
+                imageList1.Images.Add(Client.Properties.Resources.chase);
+                var item1 = new ListViewItem(new[] { ciach[3], ciach[0], ciach[1], ciach[2], ciach[4] });
+                item1.ImageIndex = 0;
+                listView1.Items.Add(item1);
+                
+            }
+            //result = client.GetEntriesByName(tbSurname.Text);
+
+        }
+
+        private void PeselButton_Click(object sender, EventArgs e)
+        {
+            int id;
+            foreach (ListViewItem litem in listView1.Items)
+            {
+                listView1.Items.Remove(litem);
+            }
+            id = Int32.Parse(tbID.Text);
+            result = client.GetData(id, true);
+            int leng = result.Length;
+            if (leng == 0)
+            {
+                MessageBox.Show("Brak wyników.");
+            }
+            else
+            {
+                {
+                    string[] ciach = System.Text.RegularExpressions.Regex.Split(result, "%%%");
+                    imageList1.Images.Add(Client.Properties.Resources.chase);
+                    var item1 = new ListViewItem(new[] { ciach[3], ciach[0], ciach[1], ciach[2], ciach[4] });
+                    item1.ImageIndex = 0;
+                    listView1.Items.Add(item1);
+
+                }
+            }
+            //MessageBox.Show(result);
         }
     }
 }

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Client.ServiceReference1 {
+namespace sdo_wcf2.ServiceReference1 {
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -45,6 +45,12 @@ namespace Client.ServiceReference1 {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/TerriblyRetrieveDatabase", ReplyAction="http://tempuri.org/IService1/TerriblyRetrieveDatabaseResponse")]
         System.Threading.Tasks.Task<string> TerriblyRetrieveDatabaseAsync();
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/OutrageousDatabaseLeak", ReplyAction="http://tempuri.org/IService1/OutrageousDatabaseLeakResponse")]
+        string[] OutrageousDatabaseLeak();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/OutrageousDatabaseLeak", ReplyAction="http://tempuri.org/IService1/OutrageousDatabaseLeakResponse")]
+        System.Threading.Tasks.Task<string[]> OutrageousDatabaseLeakAsync();
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/NukeStudent", ReplyAction="http://tempuri.org/IService1/NukeStudentResponse")]
         string NukeStudent(int id);
         
@@ -65,12 +71,12 @@ namespace Client.ServiceReference1 {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IService1Channel : Client.ServiceReference1.IService1, System.ServiceModel.IClientChannel {
+    public interface IService1Channel : sdo_wcf2.ServiceReference1.IService1, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class Service1Client : System.ServiceModel.ClientBase<Client.ServiceReference1.IService1>, Client.ServiceReference1.IService1 {
+    public partial class Service1Client : System.ServiceModel.ClientBase<sdo_wcf2.ServiceReference1.IService1>, sdo_wcf2.ServiceReference1.IService1 {
         
         public Service1Client() {
         }
@@ -129,6 +135,14 @@ namespace Client.ServiceReference1 {
         
         public System.Threading.Tasks.Task<string> TerriblyRetrieveDatabaseAsync() {
             return base.Channel.TerriblyRetrieveDatabaseAsync();
+        }
+        
+        public string[] OutrageousDatabaseLeak() {
+            return base.Channel.OutrageousDatabaseLeak();
+        }
+        
+        public System.Threading.Tasks.Task<string[]> OutrageousDatabaseLeakAsync() {
+            return base.Channel.OutrageousDatabaseLeakAsync();
         }
         
         public string NukeStudent(int id) {

@@ -11,13 +11,15 @@ namespace sdo_wcf
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "Service1" in both code and config file together.
     public class Service1 : IService1
     {
-        public string GetData(int id)
+        public string GetData(int id, bool mod)
         {
             //return string.Format("You entered: {0}", id);
             //TODO zwracanie obiektu zawierajacego dane
 
             SDOModelMethods sdomm = new SDOModelMethods();
             Person p = new Person();
+            if (mod == false)
+            {
             try
             {
                 p = sdomm.getPerson(id);
@@ -26,7 +28,21 @@ namespace sdo_wcf
             {
                 return e.Message;
             }
-            return string.Format("{0} {1}, {2}, student: {3}", p.Name, p.Surname, p.Email, p.Student);
+            //return string.Format("{0} {1}, {2}, student: {3}", p.Name, p.Surname, p.Email, p.Student);
+            }
+            else
+            {
+                try
+                {
+                    p = sdomm.getPersonByGLID(id);
+                }
+                catch (Exception e)
+                {
+                    return e.Message;
+                }
+                //return p.pssl.ToString();
+            }
+            return string.Format("{0}%%%{1}%%%{2}%%%{3}%%%{4}%%%{5}", p.Name, p.Surname, p.Email, p.pssl, p.Student, p.Id);
         }
 
         public string GetDataBySurname(string surname)
@@ -47,6 +63,14 @@ namespace sdo_wcf
             return string.Format("{0} {1}, {2}, student: {3}", p.Name, p.Surname, p.Email, p.Student);
         }
 
+        public List<String> GetEntriesByName(string surname)
+        {
+            SDOModelMethods sdomm = new SDOModelMethods();
+            var lstst = new List<String>();
+            return lstst = sdomm.GetMatchingSurnames(surname);
+            
+        }
+
         public string GetDataByEmail(string email)
         {
             //return string.Format("You entered: {0}", id);
@@ -62,26 +86,42 @@ namespace sdo_wcf
             {
                 return e.Message;
             }
-            return string.Format("{0} {1}, {2}, student: {3}", p.Name, p.Surname, p.Email, p.Student);
+            //return string.Format("{0} {1}, {2}, student: {3}", p.Name, p.Surname, p.Email, p.Student);
+            if (p != null)
+            {
+                return string.Format("{0}%%%{1}%%%{2}%%%{3}%%%{4}", p.Name, p.Surname, p.Email, p.pssl, p.Student);
+            }
+            else
+            {
+                return "";
+            }
         }
 
-        public string AddNewStudentLame(string _name, string _surn, bool batman, string _mail)
+        public string AddNewStudentLame(string _name, string _surn, bool batman, string plid, string _mail)
         {
             //InteractionModels.SDOLocalMethods1 sdolm = new InteractionModels.SDOLocalMethods1();
             //sdolm.addPerson(_name, _surn, batman, _mail);
 
             SDOModelMethods sdomm = new SDOModelMethods();
-
-            try
+            Person O = new Person();
+            O = sdomm.getPersonByGLID(Convert.ToInt32(plid));
+            if (O != null)
             {
-                sdomm.addPerson(_name, _surn, batman, _mail);
+                return "Już jest ktoś taki. Aborting.";
             }
-            catch (Exception e)
+            else
             {
-                return e.Message;
-            }
+                try
+                {
+                    sdomm.addPerson(_name, _surn, batman, plid, _mail);
+                }
+                catch (Exception e)
+                {
+                    return e.Message;
+                }
 
-            return "Done";
+                return "Done";
+            }
         }
 
         public string TerriblyRetrieveDatabase()
@@ -93,11 +133,33 @@ namespace sdo_wcf
             return sp;
         }
 
+        public List<String> OutrageousDatabaseLeak()
+        {
+            SDOModelMethods sdolm = new SDOModelMethods();
+            var zwr = new List<String>();
+            zwr = sdolm.LeakMe();
+            return zwr;
+        }
+
         public string SetData(string data)
         {
             return "OK";
             //TODO zapisywanie danych do bazy
             //Są już metody do tego, trzeba się zabawić w SDOLocalMethods1.cs
+        }
+
+        public string NukeStudent(int _id)
+        {
+            SDOModelMethods sdolm = new SDOModelMethods();
+            try
+            {
+                sdolm.deletePerson(_id);
+            }
+            catch (Exception e)
+            {
+                return e.Message.ToString();
+            }
+            return "Done";
         }
     }
 }

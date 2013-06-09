@@ -11,6 +11,7 @@
     <Property Name="Name" Type="varchar" MaxLength="50" />
     <Property Name="Surname" Type="varchar" MaxLength="50" />
     <Property Name="Email" Type="varchar" MaxLength="50" />
+    <Property Name="pssl" Type="int" />
     <Property Name="Student" Type="bit" />
   </EntityType>
 </Schema>
