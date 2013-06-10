@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service1" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IInternalServices_GetData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetData" />
+  </wsdl:message>
+  <wsdl:message name="IInternalServices_GetData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInternalServices_GetDataByEmail_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataByEmail" />
+  </wsdl:message>
+  <wsdl:message name="IInternalServices_GetDataByEmail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataByEmailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInternalServices_GetDataBySurname_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataBySurname" />
+  </wsdl:message>
+  <wsdl:message name="IInternalServices_GetDataBySurname_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataBySurnameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInternalServices_AddNewStudent_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddNewStudent" />
+  </wsdl:message>
+  <wsdl:message name="IInternalServices_AddNewStudent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddNewStudentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInternalServices_NukeStudent_InputMessage">
+    <wsdl:part name="parameters" element="tns:NukeStudent" />
+  </wsdl:message>
+  <wsdl:message name="IInternalServices_NukeStudent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NukeStudentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInternalServices_GetEntriesByName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEntriesByName" />
+  </wsdl:message>
+  <wsdl:message name="IInternalServices_GetEntriesByName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEntriesByNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInternalServices_SetData_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetData" />
+  </wsdl:message>
+  <wsdl:message name="IInternalServices_SetData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetDataResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IInternalServices">
+    <wsdl:operation name="GetData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInternalServices/GetData" message="tns:IInternalServices_GetData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInternalServices/GetDataResponse" message="tns:IInternalServices_GetData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataByEmail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInternalServices/GetDataByEmail" message="tns:IInternalServices_GetDataByEmail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInternalServices/GetDataByEmailResponse" message="tns:IInternalServices_GetDataByEmail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataBySurname">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInternalServices/GetDataBySurname" message="tns:IInternalServices_GetDataBySurname_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInternalServices/GetDataBySurnameResponse" message="tns:IInternalServices_GetDataBySurname_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddNewStudent">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInternalServices/AddNewStudent" message="tns:IInternalServices_AddNewStudent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInternalServices/AddNewStudentResponse" message="tns:IInternalServices_AddNewStudent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NukeStudent">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInternalServices/NukeStudent" message="tns:IInternalServices_NukeStudent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInternalServices/NukeStudentResponse" message="tns:IInternalServices_NukeStudent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEntriesByName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInternalServices/GetEntriesByName" message="tns:IInternalServices_GetEntriesByName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInternalServices/GetEntriesByNameResponse" message="tns:IInternalServices_GetEntriesByName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInternalServices/SetData" message="tns:IInternalServices_SetData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInternalServices/SetDataResponse" message="tns:IInternalServices_SetData_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IInternalServices" type="tns:IInternalServices">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetData">
+      <soap:operation soapAction="http://tempuri.org/IInternalServices/GetData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataByEmail">
+      <soap:operation soapAction="http://tempuri.org/IInternalServices/GetDataByEmail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataBySurname">
+      <soap:operation soapAction="http://tempuri.org/IInternalServices/GetDataBySurname" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddNewStudent">
+      <soap:operation soapAction="http://tempuri.org/IInternalServices/AddNewStudent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NukeStudent">
+      <soap:operation soapAction="http://tempuri.org/IInternalServices/NukeStudent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEntriesByName">
+      <soap:operation soapAction="http://tempuri.org/IInternalServices/GetEntriesByName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetData">
+      <soap:operation soapAction="http://tempuri.org/IInternalServices/SetData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="BasicHttpBinding_IInternalServices" binding="tns:BasicHttpBinding_IInternalServices">
+      <soap:address location="http://localhost:8733/Design_Time_Addresses/sdo_wcf2/Service1/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -79,6 +79,8 @@
     <None Include="App.config">
       <SubType>Designer</SubType>
     </None>
+    <None Include="App_Data\WCFKamilClient.pfx" />
+    <None Include="App_Data\WCFKamilServer.pfx" />
     <None Include="ClassDiagram2.cd" />
     <EntityDeploy Include="InteractionModels\SDOModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
@@ -99,9 +101,7 @@
     </None>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>

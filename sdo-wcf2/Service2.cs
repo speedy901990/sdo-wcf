@@ -39,6 +39,10 @@ namespace sdo_wcf2
                         {
                             sdomm.updatePatient(pat.Id, ciach[1], ciach[2], basaur, ciach[3], Convert.ToInt32(pat.Height), Convert.ToInt32(pat.Weight));
                         }
+                        else
+                        {
+                            sdomm.addPatient(ciach[1], ciach[2], basaur, ciach[3], Convert.ToInt32(pat.Height), Convert.ToInt32(pat.Weight));
+                        }
                     }
 
                 }
