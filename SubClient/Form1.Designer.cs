@@ -34,7 +34,6 @@
             this.tbSurnameSet = new System.Windows.Forms.TextBox();
             this.tbName = new System.Windows.Forms.TextBox();
             this.PeselButton = new System.Windows.Forms.Button();
-            this.populateSurnamesButton = new System.Windows.Forms.Button();
             this.tbSurnameGet = new System.Windows.Forms.TextBox();
             this.tbEmail = new System.Windows.Forms.TextBox();
             this.getBySurnameButton = new System.Windows.Forms.Button();
@@ -100,16 +99,6 @@
             this.PeselButton.Text = "Get By PESEL";
             this.PeselButton.UseVisualStyleBackColor = true;
             this.PeselButton.Click += new System.EventHandler(this.PeselButton_Click);
-            // 
-            // populateSurnamesButton
-            // 
-            this.populateSurnamesButton.Location = new System.Drawing.Point(535, 76);
-            this.populateSurnamesButton.Name = "populateSurnamesButton";
-            this.populateSurnamesButton.Size = new System.Drawing.Size(133, 26);
-            this.populateSurnamesButton.TabIndex = 26;
-            this.populateSurnamesButton.Text = "Get Matching Surnames";
-            this.populateSurnamesButton.UseVisualStyleBackColor = true;
-            this.populateSurnamesButton.Click += new System.EventHandler(this.populateSurnamesButton_Click);
             // 
             // tbSurnameGet
             // 
@@ -257,7 +246,6 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.PeselButton);
-            this.Controls.Add(this.populateSurnamesButton);
             this.Controls.Add(this.tbSurnameGet);
             this.Controls.Add(this.tbEmail);
             this.Controls.Add(this.getBySurnameButton);
@@ -284,7 +272,6 @@
         private System.Windows.Forms.TextBox tbSurnameSet;
         private System.Windows.Forms.TextBox tbName;
         private System.Windows.Forms.Button PeselButton;
-        private System.Windows.Forms.Button populateSurnamesButton;
         private System.Windows.Forms.TextBox tbSurnameGet;
         private System.Windows.Forms.TextBox tbEmail;
         private System.Windows.Forms.Button getBySurnameButton;

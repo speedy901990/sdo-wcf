@@ -13,10 +13,9 @@ namespace sdo_wcf2
     public class Service1 : ISecondServer, IInternalServices
     {
         public VectorClock service1_1VC = new VectorClock("logService1_1VectorClock.log");
-
+            
         public string GetData(int id, bool mod)
         {
-
             Server2ModelMethods s2mm = new Server2ModelMethods();
             Patient p = new Patient();
             if (mod == false)

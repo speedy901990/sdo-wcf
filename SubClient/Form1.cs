@@ -54,22 +54,55 @@ namespace SubClient
 
         private void PeselButton_Click(object sender, EventArgs e)
         {
-
+            result = client.GetData(Int32.Parse(tbID.Text), false);
+            if (result.Length == 0)
+                MessageBox.Show("Brak wyników", " ", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+            else
+            {
+                string[] ciach = System.Text.RegularExpressions.Regex.Split(result, "%%%");
+                tbSurnameSet.Text = ciach[1];
+                tbName.Text = ciach[0];
+                tbPeselSet.Text = ciach[3];
+                tbEmailSet.Text = ciach[2];
+                studentCheckBox.Checked = bool.Parse(ciach[4]);
+            }
         }
 
         private void getByEmailButton_Click(object sender, EventArgs e)
         {
-
+            result = client.GetDataByEmail(tbEmail.Text);
+            if (result.Length == 0)
+                MessageBox.Show("Brak wyników", " ", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+            else
+            {
+                string[] ciach = System.Text.RegularExpressions.Regex.Split(result, "%%%");
+                tbSurnameSet.Text = ciach[1];
+                tbName.Text = ciach[0];
+                tbPeselSet.Text = ciach[3];
+                tbEmailSet.Text = ciach[2];
+                studentCheckBox.Checked = bool.Parse(ciach[4]);
+            }
         }
 
         private void getBySurnameButton_Click(object sender, EventArgs e)
         {
-
+            result = client.GetDataBySurname(tbSurnameGet.Text);
+            if (result.Length == 0)
+                MessageBox.Show("Brak wyników", " ", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+            else
+            {
+                string[] ciach = System.Text.RegularExpressions.Regex.Split(result, "%%%");
+                tbSurnameSet.Text = ciach[1];
+                tbName.Text = ciach[0];
+                tbPeselSet.Text = ciach[3];
+                tbEmailSet.Text = ciach[2];
+                studentCheckBox.Checked = bool.Parse(ciach[4]);
+            }
         }
 
         private void populateSurnamesButton_Click(object sender, EventArgs e)
         {
-
+           
         }
     }
 }

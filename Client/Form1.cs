@@ -169,7 +169,6 @@ namespace Client
                     var item1 = new ListViewItem(new[] { ciach[3], ciach[0], ciach[1], ciach[2], ciach[4] });
                     item1.ImageIndex = 0;
                     listView1.Items.Add(item1);
-
                 }
             }
             //MessageBox.Show(result);
