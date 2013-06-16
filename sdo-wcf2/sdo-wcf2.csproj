@@ -78,6 +78,7 @@
     </Compile>
     <Compile Include="Service1.cs" />
     <Compile Include="Service2.cs" />
+    <Compile Include="VectorClock.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">
