@@ -7,7 +7,7 @@ using System.IO;
 
 namespace sdo_wcf
 {
-    class VectorClock
+    public class VectorClock
     {
         private string logFile = "defaultLog";
         private List<KeyValuePair<DateTime, string>> versions;
@@ -27,14 +27,14 @@ namespace sdo_wcf
         {
             FileStream file = new FileStream(logFile, FileMode.Append, FileAccess.Write);
             StreamWriter sw = new StreamWriter(file);
-            sw.Write(message);
+            sw.Write(message + "\n");
             sw.Close();
             file.Close();
         }
 
-        private void incrementVersion(string details)
+        public void incrementVersion(string details)
         {
-            if (versions.Count > MAX_NUMBER_OF_VERSIONS)
+            if (versions.Count < MAX_NUMBER_OF_VERSIONS)
             {
                 this.timestamp = DateTime.Now.ToBinary();
                 KeyValuePair<DateTime, string> newEntry = new KeyValuePair<DateTime, string>(DateTime.Now, details);
@@ -43,12 +43,12 @@ namespace sdo_wcf
             }
             else
             {
-                string errorMsg = "Date: " + DateTime.Now.ToString() + " \n:-: ERROR! Cannot log version.";
+                string errorMsg = "Date: " + DateTime.Now.ToString() + " \n:-: ERR: Cannot log version.";
                 logToFile(errorMsg);
             }
         }
 
-        private long getTimestamp()
+        public long getTimestamp()
         {
             return this.timestamp;
         }

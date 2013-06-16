@@ -11,6 +11,8 @@ namespace sdo_wcf
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "Service1" in both code and config file together.
     public class Service1 : IService1
     {
+        public VectorClock service1VC = new VectorClock("logService1VectorClock.log");
+
         public string GetData(int id, bool mod)
         {
             //return string.Format("You entered: {0}", id);
@@ -102,11 +104,13 @@ namespace sdo_wcf
             //InteractionModels.SDOLocalMethods1 sdolm = new InteractionModels.SDOLocalMethods1();
             //sdolm.addPerson(_name, _surn, batman, _mail);
 
+            service1VC.incrementVersion("Adding new Student...");
             SDOModelMethods sdomm = new SDOModelMethods();
             Person O = new Person();
             O = sdomm.getPersonByGLID(Convert.ToInt32(plid));
             if (O != null)
             {
+                service1VC.incrementVersion("ERR: Student already exists!");
                 return "Już jest ktoś taki. Aborting.";
             }
             else
@@ -117,9 +121,11 @@ namespace sdo_wcf
                 }
                 catch (Exception e)
                 {
+                    service1VC.incrementVersion("ERR: Unknown error while saving new Student data!");
                     return e.Message;
                 }
 
+                service1VC.incrementVersion("Student successfully added.");
                 return "Done";
             }
         }
@@ -150,6 +156,7 @@ namespace sdo_wcf
 
         public string NukeStudent(int _id)
         {
+            service1VC.incrementVersion("Deleting Student with ID =" + _id.ToString() + "...");
             SDOModelMethods sdolm = new SDOModelMethods();
             try
             {
@@ -159,6 +166,7 @@ namespace sdo_wcf
             {
                 return e.Message.ToString();
             }
+            service1VC.incrementVersion("Student with ID = " + _id.ToString() + " successfully deleted.");
             return "Done";
         }
     }
