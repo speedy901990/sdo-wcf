@@ -95,7 +95,6 @@ namespace sdo_wcf
         public static VectorClock compare(VectorClock vcOne, VectorClock vcTwo)
         {
 
-            // TEMPORARY return
             return vcOne;
         }
     }

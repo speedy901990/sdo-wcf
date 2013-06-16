@@ -5,12 +5,14 @@ using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
 using sdo_wcf2.Models;
+using sdo_wcf;
 
 namespace sdo_wcf2
 {
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "Service1" in both code and config file together.
     public class Service1 : ISecondServer, IInternalServices
     {
+        public VectorClock service1_1VC = new VectorClock("logService1_1VectorClock.log");
 
         public string GetData(int id, bool mod)
         {
@@ -98,6 +100,7 @@ namespace sdo_wcf2
         public string NukeStudent(int _id)
         {
             Server2ModelMethods s2mm = new Server2ModelMethods();
+            service1_1VC.incrementVersion("Deleting Student with ID =" + _id.ToString() + "...");
             try
             {
                 s2mm.deletePatient(_id);
@@ -106,13 +109,14 @@ namespace sdo_wcf2
             {
                 return e.Message.ToString();
             }
+            service1_1VC.incrementVersion("Student with ID = " + _id.ToString() + " successfully deleted.");
             return "Done";
         }
 
         public string AddNewStudent(string _name, string _surn, bool batman, string _mail, float height, float weight)
         {
             //sdolm.addPerson(_name, _surn, batman, _mail);
-
+            service1_1VC.incrementVersion("Adding new Student...");
             Server2ModelMethods sdomm = new Server2ModelMethods();
 
             try
@@ -121,9 +125,10 @@ namespace sdo_wcf2
             }
             catch (Exception e)
             {
+                service1_1VC.incrementVersion("ERR: Unknown error while saving new Student data!");
                 return e.Message;
             }
-
+            service1_1VC.incrementVersion("Student successfully added.");
             return "Done";
         }
 

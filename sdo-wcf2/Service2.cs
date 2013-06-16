@@ -5,20 +5,25 @@ using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
 using sdo_wcf2.Models;
+using sdo_wcf;
 
 namespace sdo_wcf2
 {
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "Service2" in both code and config file together.
     public class Service2 : ISecondServer, IRemotingDB
     {
+        public VectorClock service1_2VC = new VectorClock("logService1_2VectorClock.log");
+
         public string MakeDatabasesSynced()
         {
+            service1_2VC.incrementVersion("Sync started...");
             ServiceReference1.Service1Client clnt = new ServiceReference1.Service1Client("wsHttpEndpoint");
             Server2ModelMethods sdomm = new Server2ModelMethods();
             List<String> res0 = clnt.OutrageousDatabaseLeak().ToList<String>();
             string procenty = "%%%";
             if (res0.Count == 0)
             {
+                service1_2VC.incrementVersion("ERR: Sync aborted. Empty database!");
                 return "Pusta baza.";
             }
             else
@@ -47,6 +52,7 @@ namespace sdo_wcf2
 
                 }
             }
+            service1_2VC.incrementVersion("All data has been synced.");
             return "Update Completed.";
         }
         public string TerriblyRetrieveDatabase()
