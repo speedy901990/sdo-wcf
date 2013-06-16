@@ -58,7 +58,7 @@ namespace sdo_wcf2
             {
                 return e.Message;
             }
-            return string.Format("{0} {1}, {2}, student: {3}", p.Name, p.Surname, p.Email, p.Student);
+            return string.Format("{0}%%%{1}%%%{2}%%%{3}%%%{4}%%%{5}%%%{6}%%%{7}", p.Name, p.Surname, p.Email, p.pssl, p.Student, p.Id, p.Height, p.Weight);
         }
 
         public List<String> GetEntriesByName(string surname)

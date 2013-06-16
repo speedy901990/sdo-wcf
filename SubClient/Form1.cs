@@ -13,8 +13,8 @@ namespace SubClient
     public partial class Form1 : Form
     {
         RemotingServiceReference1.RemotingDBClient clnt = new RemotingServiceReference1.RemotingDBClient();
-
-
+        
+        
         public Form1()
         {
             InitializeComponent();
